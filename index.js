@@ -1,12 +1,7 @@
 var AWS = require('aws-sdk');
 
-
-AWS.config.update({
-    accessKeyId: 'ASIAVCRRTJEFLFLW7IXD',
-    secretAccessKey: 'dSR2XasFqi2qcdiUyR+DGHuMaX/U1GeAZcMv5Eju',
-    sessionToken: 'FwoGZXIvYXdzEHsaDOX7nqgENuQlel2ILSLOAS17Y+VKkpgU4vSW2Is+WtBlqEfym+dDSl7g6ojLoapewNZf5VGJRL8jUhRGlmLjJMmg/lgK+7L0DQ2PJ8LbFgxPDAIBbLGXjNmqsk4NnKBLZi31PrdK/oB8p8R/4nYPJ2Mp/E4FS/MIY9YuOEcNPPu85r9gFiIdGmT9XtWAZnjJnN2C+xtje7AqjRTuC4JecewaRB3KVReygJUroPETFMz1v1rYKgy2o8/7eZMRFlyKGt2OJ5TCpEwH7s80WWGRtpqXhsbGvDCa0fmp/WklKIvesPMFMi0g2y7DHFCcMcuvHJjepPnSeQR1+CrQeTFdTYqCzsDpCxcX9MIsSixf1okLNwc=',
-    region: 'us-east-1'
-});
+AWS.config.loadFromPath('./credentials.json')
+AWS.config.update({region: "us-east-1"});
 
 var params = {
     Image : {
